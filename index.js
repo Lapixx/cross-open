@@ -10,8 +10,17 @@ const getCmd = () => {
     if (platform === "win32") return "start";
 };
 
+const handleExec = (err, stdout, stderr) => {
+    if (err) {
+        console.error(err.message || err);
+        process.exit(1);
+    }
+    if (stdout) console.log(stdout);
+    if (stderr) console.error(stderr);
+}
+
 // Creates the `open` function
-const makeOpen = opener => target => exec(`${opener} "${target}"`);
+const makeOpen = opener => target => exec(`${opener} "${target}"`, handleExec);
 
 // Escapes a command line argument
 const escape = arg => arg.replace(/"/g, '\\\"');
