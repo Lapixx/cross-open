@@ -6,13 +6,6 @@
   "bin": {
     "cross-open": "bin/cross-open.js"
   },
-  "os": [
-    "darwin",
-    "linux",
-    "win32",
-    "freebsd",
-    "openbsd"
-  ],
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
