@@ -8,6 +8,9 @@ const getCmd = () => {
 
     if (platform === "darwin") return "open";
     if (platform === "win32") return "start";
+		if (platform === "linux") return "xdg-open";
+		if (platform === "freebsd") return "xdg-open";
+		if (platform === "openbsd") return "xdg-open";
 };
 
 const handleExec = (err, stdout, stderr) => {

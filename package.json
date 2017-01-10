@@ -1,11 +1,18 @@
 {
   "name": "cross-open",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Cross platform file opening",
   "main": "index.js",
   "bin": {
     "cross-open": "bin/cross-open.js"
   },
+  "os": [
+    "darwin",
+    "linux",
+    "win32",
+    "freebsd",
+    "openbsd"
+  ],
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
